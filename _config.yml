@@ -1,118 +1,87 @@
-remote_theme: Sylhare/Type-on-Strap
+theme: hueman
 
-# SITE CONFIGURATION
-baseurl: ""
-url: "https://oberonia.github.io"
-title: Type on Strap # site's title
-description: "A website with blog posts and pages" # used by search engines
+# Menus
+menu:
+    Home: /
+    # Delete this row if you don't want categories in your header nav bar
+    Categories:
+    About: /about/index.html
 
+# Customize
+customize:
+    logo:
+        width: 165
+        height: 60
+        url: images/logo-header.png
+    theme_color: '#006bde'
+    highlight: androidstudio
+    sidebar: left # sidebar position, options: left, right
+    thumbnail: true # enable posts thumbnail, options: true, false
+    favicon: # path to favicon
+    social_links: # for more icons, please see http://fontawesome.io/icons/#brand
+        twitter: /
+        facebook: /
+        google-plus: /
+        github: https://github.com/ppoffice/hexo-theme-hueman
+        weibo: /
+        rss: /
 
-# THEME-SPECIFIC CONFIGURATION
-theme_settings:
-  # Meta
-  title: Type on Strap # blog's title
-  avatar: assets/img/triangle.svg
-  favicon: assets/favicon.ico
-  gravatar: # Email MD5 hash
+# Widgets
+widgets:
+    - catalog
+    - recent_posts
+    - category
+    - archive
+    - tag
+    - tagcloud
+    - links
 
-  # Header and footer text
-  header_text: > #two or three lines to describe your site
-     <p>Change header text in <code>_config.yml</code> <br> to update this feature.</p>
-  header_text_feature_image: assets/img/pexels/triangular.jpeg
-  footer_text: >
-   Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/sylhare/Type-on-Strap">Type on Strap</a>
-  # Icons
-  rss: true  # Make sure you created a feed.xml with feed.xml layout
-  email_address: # Full email address, e.g. "sam@example.com"
-  behance:
-  bitbucket:
-  dribbble:
-  facebook:
-  flickr:
-  gitlab:
-  github: "sylhare"
-  google_plus:
-  instagram:
-  keybase:
-  linkedin:  # Full URL
-  pinterest:
-  reddit:
-  soundcloud:
-  stack_exchange:  # Full URL
-  steam:
-  tumblr:
-  twitter: # "twitter username"
-  vimeo:
-  wordpress:
-  youtube:
-  
-  # Sharing options
-  share_buttons:
-    facebook: true
-    twitter: true
-    google_plus: true
-    tumblr:
-    pinterest:
-    pocket:
-    reddit: true
-    linkedin:
-    wordpress:
-    email: true
+# Search
+search:
+    insight: true # you need to install `hexo-generator-json-content` before using Insight Search
+    swiftype: # enter swiftype install key here
+    baidu: false # you need to disable other search engines to use Baidu search, options: true, false
 
-  # Scripts / Features 
-  google_analytics: # Tracking ID, e.g. "UA-000000-01"
-  disqus_shortname:
-  katex: true # Enable if using math markup
-  
-  special_page:
-    search: 
-      icon: "search" # Assuming page link and icon are the same
-      enabled: true
-    tags:
-      icon: "tags"
-      enabled: true
-  
-  # Localization strings
-  str_follow_on: "Follow on"
-  str_rss_follow: "Follow RSS feed"
-  str_share_on: "Share on"
-  str_add_to: "Add to"
-  str_email: "Email"
-  str_tweet: "Tweet"
-  str_pin_it: "Pin it"
-  str_next_post: "Next post"
-  str_previous_post: "Previous post"
-  str_next_page: "Next"
-  str_previous_page: "Prev"
-  str_continue_reading: "Continue reading"
-  str_javascript_required_disqus: "Please enable JavaScript to view comments."
+# Comment
+comment:
+    disqus: hexo-theme-hueman # enter disqus shortname here
+    duoshuo: # enter duoshuo shortname here
+    youyan: # enter youyan uid here
+    facebook: # enter true to enable
+    isso: # enter the domain name of your own comment isso server eg. comments.example.com
+    changyan:
+        appId: # enter the changyan appId here
+        appKey: # enter the changyan appKey here
+        on: # enter true to enable
+    valine: # Valine Comment System https://github.com/xCss/Valine
+        on:  # enter true to enable valine
+        appId:  # enter the leancloud application appId here
+        appKey:  # enter the leancloud application appKey here
+        notify: # enter true to enable <Mail notifier> https://github.com/xCss/Valine/wiki/Valine-%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F%E4%B8%AD%E7%9A%84%E9%82%AE%E4%BB%B6%E6%8F%90%E9%86%92%E8%AE%BE%E7%BD%AE
+        verify: # enter true to enable <Validation code>
+        placeholder: Just Do It # enter the comment box placeholder
+        avatar: identicon # (''/mm/identicon/monsterid/wavatar/retro/hide), more to see https://valine.js.org/avatar/
+        avatar_cdn: https://gravatar.loli.net/avatar/ # avatar CDN address, default gravatar.loli.net
+        pageSize: 10 # comments of one page
 
-  # Colours, typography and padding
-  # Open the "_sass > base" folder, and open "_variables.scss"
-  google_fonts: "Source+Sans+Pro:400,700,700italic,400italic"
+# Share
+share: default # options: jiathis, bdshare, addtoany, default
 
-  # Post navigation
-  post_navigation: true
-  
-  
-# PAGINATION
-paginate: 5
-paginate_path: "blog/page:num"
+# Plugins
+plugins:
+    lightgallery: true # options: true, false
+    justifiedgallery: true # options: true, false
+    google_analytics: # enter the tracking ID for your Google Analytics
+    baidu_analytics: # enter Baidu Analytics hash key
+    bing_site_verification: # enter Bing verification key here
+    mathjax: false # options: true, false
 
-
-# PORTFOLIO
-collections:
-  portfolio:
-    output: true
-    permalink: /:collection/:name
-
-
-# BUILD SETTINGS
-markdown: kramdown
-highlighter: rouge
-sass:
-  sass_dir: _sass
-  style: :compressed
-plugins: [jekyll-paginate, jekyll-seo-tag]
-#theme: type-on-strap # Uncomment if using the theme as a jekyll theme gem
-exclude: ["Gemfile", "Gemfile.lock", "type-on-strap.gemspec", "*.gem", "LICENSE", "README.md", "screenshot.png", "package.json", "node_modules", "gulpfile.js", ".idea/*"]
+# Miscellaneous
+miscellaneous:
+    open_graph: # see http://ogp.me
+        fb_app_id:
+        fb_admins:
+        twitter_id:
+        google_plus:
+    links:
+        Hexo: http://hexo.io
